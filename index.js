@@ -3,8 +3,8 @@ let playerImage;
 let gruntSound;
 
 function preload() {
-  playerImage = loadImage('./assets/pig.png');
-  gruntSound = loadSound('./assets/pigGrunt.wav');
+  playerImage = loadImage('./assets/playerImage.png');
+  playerJumpSound = loadSound('./assets/playerJumpSound.wav');
 }
 
 function setup() {
@@ -60,7 +60,7 @@ function keyPressed() {
     if (keyCode == UP_ARROW && player.isGrounded) {
       player.isJumping = true;
       player.isGrounded = false;
-      gruntSound.play();
+      playerJumpSound.play();
     }
   }
 }
